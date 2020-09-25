@@ -3,10 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { UrlProvider } from './store/UrlProvider'
+import { LoginProvider } from './store/LoginProvider'
+import { UserProvider } from './store/UserProvider'
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <LoginProvider>
+        <UrlProvider>
+          <UserProvider>
+            <App />
+          </UserProvider>
+        </UrlProvider>
+      </LoginProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
