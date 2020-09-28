@@ -7,13 +7,19 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { UrlProvider } from './store/UrlProvider'
 import { LoginProvider } from './store/LoginProvider'
 import { UserProvider } from './store/UserProvider'
+import { TeamProvider } from './store/TeamProvider'
+import { SubprojectProvider } from './store/SubprojectProvider'
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <LoginProvider>
         <UrlProvider>
           <UserProvider>
-            <App />
+            <TeamProvider>
+              <SubprojectProvider>
+                <App />
+              </SubprojectProvider>
+            </TeamProvider>
           </UserProvider>
         </UrlProvider>
       </LoginProvider>

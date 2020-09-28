@@ -11,6 +11,7 @@ import TaskAdd from './component/content/TaskAdd'
 import ProjectAdd from './component/content/ProjectAdd'
 import ProjectManage from './component/content/ProjectManage'
 import ProjectView from './component/content/ProjectView'
+import SubprojectManage from './component/content/SubprojectManage'
 function App() {
   return (
     <div className="wrapper">
@@ -19,6 +20,9 @@ function App() {
       <div className="content-wrapper">
         <section className="content">
           <Switch>
+            <Route path="/subproject/manage/:id/:subID">
+              <SubprojectManage />
+            </Route>
             <Route path="/project/new">
               <ProjectAdd />
             </Route>

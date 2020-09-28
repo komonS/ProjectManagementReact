@@ -3,21 +3,24 @@ import { Link, useHistory, useParams } from "react-router-dom";
 import { LoginContext } from '../../../store/LoginProvider'
 import { UserContext } from '../../../store/UserProvider'
 import { UrlContext } from '../../../store/UrlProvider'
+import { TeamContext } from '../../../store/TeamProvider'
 import axios from 'axios'
 
 function Team(props) {
     const { login, setLogin } = useContext(LoginContext)
     const { user, setUser } = useContext(UserContext)
     const { url } = useContext(UrlContext)
+
+    const { team , setTeam } = useContext(TeamContext)
+
     const [id, setId] = useState('')
-    const [team, setTeam] = useState([])
+    //const [team, setTeam] = useState([])
     const getTeam = async () => {
         let res = await axios.get(url + '/project/member', {
             params:{
                 projectID: props.projectID
             }
         })
-        console.log(res.data)
         setTeam(res.data)
     }
 
