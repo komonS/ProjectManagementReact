@@ -12,6 +12,8 @@ import ProjectAdd from './component/content/ProjectAdd'
 import ProjectManage from './component/content/ProjectManage'
 import ProjectView from './component/content/ProjectView'
 import SubprojectManage from './component/content/SubprojectManage'
+import TaskAll from './component/content/TaskAll'
+import ProjectTable from './component/content/ProjectTable'
 function App() {
   return (
     <div className="wrapper">
@@ -20,6 +22,12 @@ function App() {
       <div className="content-wrapper">
         <section className="content">
           <Switch>
+            <Route path="/project/table/:id">
+              <ProjectTable />
+            </Route>
+            <Route path="/task/table/:id">
+              <TaskAll />
+            </Route>
             <Route path="/subproject/manage/:id/:subID">
               <SubprojectManage />
             </Route>

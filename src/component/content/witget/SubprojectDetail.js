@@ -47,7 +47,6 @@ function SubprojectDetail(props) {
             alert(res.data.status +'! '+res.data.detail)
         }else{
             alert(res.data.status + '! please update again or contact to admin')
-            console.log(res.data)
         }
     }
 

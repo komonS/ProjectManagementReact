@@ -8,6 +8,7 @@ import '../css/Project.css'
 import ProjectDetail from './witget/ProjectDetail'
 import SubprojectDetail from './witget/SubprojectDetail'
 import OrderAll from './witget/OrderAll'
+import Assign from './modal/Assign'
 function SubprojectManage() {
   const { login, setLogin } = useContext(LoginContext)
   const { user, setUser } = useContext(UserContext)
@@ -23,9 +24,15 @@ function SubprojectManage() {
                     <SubprojectDetail subID={subID} />
                 </div>
             </div>
+            <div className="col-md-6">
+                <button className="btn btn-warning" data-toggle="modal" data-target="#order">Assign</button>
+            </div>
         </div>
         <div>
             <OrderAll subID={subID} />
+        </div>
+        <div>
+            <Assign subID={subID}/>
         </div>
     </div>
   );

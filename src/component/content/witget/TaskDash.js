@@ -54,7 +54,7 @@ function TaskDash() {
         <div className="icon">
           <i className="fa fa-list-ol"></i>
         </div>
-        <Link to="/task/all" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></Link>
+        <Link to="/task/table/all" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></Link>
       </div>
       <div className="row">
         <div className="col-md-4">
@@ -67,7 +67,7 @@ function TaskDash() {
             <div className="icon">
               <i className="fa fa-list-ol"></i>
             </div>
-            <Link to="/task/incoming" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></Link>
+            <Link to="/task/table/incoming" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></Link>
           </div>
         </div>
         <div className="col-md-4">
@@ -80,7 +80,7 @@ function TaskDash() {
             <div className="icon">
               <i className="fa fa-list-ol"></i>
             </div>
-            <Link to="/task/going" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></Link>
+            <Link to="/task/table/going" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></Link>
           </div>
         </div>
         <div className="col-md-4">
@@ -93,7 +93,7 @@ function TaskDash() {
             <div className="icon">
               <i className="fa fa-list-ol"></i>
             </div>
-            <Link to="/task/delayed" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></Link>
+            <Link to="/task/table/delayed" className="small-box-footer">More info <i className="fa fa-arrow-circle-right"></i></Link>
           </div>
         </div>
       </div>

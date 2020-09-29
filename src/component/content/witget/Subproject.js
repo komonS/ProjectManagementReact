@@ -23,7 +23,13 @@ function Subproject(props) {
         })
 
         setSubproject(res.data)
-        console.log(res.data)
+    }
+
+    const onDel = async (id) => {
+        let res = await axios.delete(url+'/subproject/'+id)
+        if(res.data.status == 'success'){
+            getData()
+        }
     }
 
     useEffect(() => {
@@ -46,7 +52,7 @@ function Subproject(props) {
                                 {item.subProjectDescript}
                             </span>
 
-                            <button className='btn btn-danger btn-sm pull-lift'>Delete</button>
+                            <button className='btn btn-danger btn-sm pull-lift' onClick={()=> onDel(item.subProjectID)}>Delete</button>
 
                             <Link to={'/subproject/manage/'+id+'/' + item.subProjectID}>
                                 <button className='btn btn-warning btn-sm pull-right'>Manage</button>

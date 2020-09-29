@@ -21,7 +21,6 @@ function SubprojectProgress(props) {
         })
 
         setSubproject(res.data)
-        console.log(res.data)
     }
 
     useEffect(() => {
