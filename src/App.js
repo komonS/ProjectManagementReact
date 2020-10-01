@@ -14,6 +14,7 @@ import ProjectView from './component/content/ProjectView'
 import SubprojectManage from './component/content/SubprojectManage'
 import TaskAll from './component/content/TaskAll'
 import ProjectTable from './component/content/ProjectTable'
+import Profile from './component/content/Profile'
 function App() {
   return (
     <div className="wrapper">
@@ -22,6 +23,9 @@ function App() {
       <div className="content-wrapper">
         <section className="content">
           <Switch>
+            <Route path="/profile">
+              <Profile />
+            </Route>
             <Route path="/project/table/:id">
               <ProjectTable />
             </Route>

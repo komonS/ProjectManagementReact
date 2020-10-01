@@ -32,8 +32,8 @@ function Header() {
   const Logined = () => {
     return <li className="dropdown user user-menu">
       <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-        
-        <span className="hidden-xs">{ user.fname } {user.lname }</span>
+
+        <span className="hidden-xs">{user.fname} {user.lname}</span>
       </a>
       <ul className="dropdown-menu">
         <li className="user-header">
@@ -42,7 +42,11 @@ function Header() {
 
         </li>
         <li className="user-footer">
-
+          <div className="pull-left">
+            <Link to="/profile" className="btn btn-default btn-flat">
+              Profile
+            </Link>
+          </div>
           <div className="pull-right">
             <a href="#" className="btn btn-default btn-flat" onClick={logout} >Sign out</a>
           </div>
