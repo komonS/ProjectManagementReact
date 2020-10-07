@@ -10,6 +10,7 @@ import { UserProvider } from './store/UserProvider'
 import { TeamProvider } from './store/TeamProvider'
 import { SubprojectProvider } from './store/SubprojectProvider'
 import { OrderProvider } from './store/OrderProvider'
+import { FriendProvider } from './store/FriendProvider'
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -19,7 +20,9 @@ ReactDOM.render(
             <TeamProvider>
               <SubprojectProvider>
                 <OrderProvider>
-                  <App />
+                  <FriendProvider>
+                    <App />
+                  </FriendProvider>
                 </OrderProvider>
               </SubprojectProvider>
             </TeamProvider>

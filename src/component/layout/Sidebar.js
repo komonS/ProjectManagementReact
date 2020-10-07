@@ -22,6 +22,11 @@ function Sidebar() {
           <i className="fa  fa-plus"></i> <span>New Task</span>
         </Link>
       </li>
+      <li>
+        <Link to="/group">
+          <i className="fa  fa-users"></i> <span>User Group</span>
+        </Link>
+      </li>
     </ul>
   }
 

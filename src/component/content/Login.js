@@ -4,7 +4,7 @@ import axios from 'axios'
 import { LoginContext } from '../../store/LoginProvider'
 import { UrlContext } from '../../store/UrlProvider'
 import {UserContext} from '../../store/UserProvider'
-function Template() {
+function Login() {
     const history = useHistory();
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -68,4 +68,4 @@ function Template() {
     );
 }
 
-export default Template;
+export default Login;

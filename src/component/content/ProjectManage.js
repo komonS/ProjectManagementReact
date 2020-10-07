@@ -8,8 +8,9 @@ import ProjectDetail from './witget/ProjectDetail'
 import Team from './witget/Team'
 import OrderAdd from './modal/OrderAdd'
 import Subproject from './witget/Subproject'
+import TeamAdd from './modal/TeamAdd'
 import '../css/ProjectManagement.css'
-function Template() {
+function ProjectManagement() {
   const { login, setLogin } = useContext(LoginContext)
   const { user, setUser } = useContext(UserContext)
   const { url } = useContext(UrlContext)
@@ -31,6 +32,7 @@ function Template() {
       <div className="row">
         <div className="col-md-12 button-option">
           <button className="btn btn-success btn-sm " data-toggle="modal" data-target="#suborder">Add Order</button>
+          <button className="btn btn-warning btn-sm " data-toggle="modal" data-target="#team">Add Team</button>
         </div>
       </div>
       <div className="row">
@@ -40,9 +42,10 @@ function Template() {
       </div>
       <div>
         <OrderAdd projectID={id} />
+        <TeamAdd projectID={id} />
       </div>
     </div>
   );
 }
 
-export default Template;
+export default ProjectManagement;

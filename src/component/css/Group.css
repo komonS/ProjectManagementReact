@@ -1,0 +1,43 @@
+.project-list{
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.group-list{
+    padding: 5px;
+}
+
+.friend-list{
+    display: block;
+    width: 100%;
+}
+
+
+/*
+.friend-list-item :hover{
+    padding: 10px;
+    opacity: 0.5;
+    color: white;
+    border: solid 1px gray;
+}
+*/
+.friend-list-item{
+    display: block;
+    padding: 10px;
+    background-color: #6699CC;
+    color: white;
+    border: solid 1px gray;
+}
+
+.friend-list-btn{
+    margin: 5px;
+}
+
+.data-box{
+    padding: 10px;
+    border: solid 1px gray;
+    border-radius: 5px;
+}

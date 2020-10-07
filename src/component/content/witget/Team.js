@@ -47,7 +47,7 @@ function Team(props) {
                                     {item.fname} {item.lname}
                                 </td>
                                 <td>
-                                    {item.user_project_status}
+                                    {item.memberStatusName}
                                 </td>
                                 <td>
                                     <button className="btn btn-danger btn-sm">Del</button>

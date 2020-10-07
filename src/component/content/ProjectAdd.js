@@ -5,7 +5,7 @@ import { UserContext } from '../../store/UserProvider'
 import { UrlContext } from '../../store/UrlProvider'
 import axios from 'axios'
 
-function Template() {
+function ProjectAdd() {
     const { login, setLogin } = useContext(LoginContext)
     const { user, setUser } = useContext(UserContext)
     const { url } = useContext(UrlContext)
@@ -55,7 +55,7 @@ function Template() {
     const onAddDetail = async (projectID) => {
         let res = await axios.post(url+'/project/detail',{
             memberID:localStorage.userID,
-            userStatus:'master',
+            userStatus:'1',
             comment:comment,
             projectID:projectID
         })
@@ -124,4 +124,4 @@ function Template() {
     );
 }
 
-export default Template;
+export default ProjectAdd;

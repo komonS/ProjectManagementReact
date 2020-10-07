@@ -12,6 +12,41 @@ function ProjectView() {
   const { user, setUser } = useContext(UserContext)
   const { url } = useContext(UrlContext)
   const { id } = useParams()
+
+  const [master, setMaster] = useState(null)
+
+  const getMaster = async () => {
+    let res = await axios.get(url+'/project/master',{
+      params:{
+        projectID:id,
+        memberID:localStorage.userID
+      }
+    })
+    console.log(res.data)
+    if(res.data.length > 0){
+      setMaster(res.data[0].memberID)
+    }
+    
+  }
+
+  const ManageButton = () => {
+    let bm = ""
+    if(master != null){
+      bm = <Link to={'/project/manage/' + id}>
+      <button className="btn btn-info btn-sm">Manage</button>
+    </Link>
+    }else{
+      bm = ""
+    }
+    return bm
+  }
+
+    useEffect(() => {
+      getMaster()
+    }, [])
+
+
+
   return (
     <div>
       <div className="row">
@@ -25,9 +60,7 @@ function ProjectView() {
         <div className="col-md-3"></div>
       </div>
       <div className="row button-option">
-        <Link to={'/project/manage/' + id}>
-          <button className="btn btn-info btn-sm">Manage</button>
-        </Link>
+        <ManageButton />
       </div>
       <div className="row">
         <SubprojectProgress projectID={id}/>

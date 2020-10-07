@@ -56,9 +56,14 @@ function Header() {
   }
 
   const NonLogin = () => {
-    return <li>
-      <Link to="/login"><i className="fa fa-sign-in"></i> Sign In</Link>
-    </li>
+    return <>
+      <li>
+        <Link to="/login"><i className="fa fa-sign-in"></i> Sign In</Link>
+      </li>
+      <li>
+        <Link to="/register"><i className="fa fa-sign-in"></i> Sign Up</Link>
+      </li>
+    </>
   }
 
   useEffect(() => {

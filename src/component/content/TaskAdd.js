@@ -5,7 +5,7 @@ import { UserContext } from '../../store/UserProvider'
 import { UrlContext } from '../../store/UrlProvider'
 import axios from 'axios'
 
-function Template() {
+function TaskAdd() {
     const { login, setLogin } = useContext(LoginContext)
     const { user, setUser } = useContext(UserContext)
     const { url } = useContext(UrlContext)
@@ -115,4 +115,4 @@ function Template() {
     );
 }
 
-export default Template;
+export default TaskAdd;

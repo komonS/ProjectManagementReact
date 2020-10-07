@@ -5,7 +5,7 @@ import { UserContext } from '../../../store/UserProvider'
 import { UrlContext } from '../../../store/UrlProvider'
 import axios from 'axios'
 
-function Template(props) {
+function ProjectDetail(props) {
     const { login, setLogin } = useContext(LoginContext)
     const { user, setUser } = useContext(UserContext)
     const { url } = useContext(UrlContext)
@@ -78,4 +78,4 @@ function Template(props) {
     );
 }
 
-export default Template;
+export default ProjectDetail;

@@ -5,7 +5,7 @@ import { UserContext } from '../../../store/UserProvider'
 import { UrlContext } from '../../../store/UrlProvider'
 import axios from 'axios'
 
-function Project() {
+function ProjectDash() {
     const [incoming, setIncoming] = useState(0)
     const [going, setGoing] = useState(0)
     const [delayed, setDelayed] = useState(0)
@@ -114,4 +114,4 @@ function Project() {
     );
 }
 
-export default Project;
+export default ProjectDash;

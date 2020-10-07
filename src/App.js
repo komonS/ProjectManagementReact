@@ -15,6 +15,8 @@ import SubprojectManage from './component/content/SubprojectManage'
 import TaskAll from './component/content/TaskAll'
 import ProjectTable from './component/content/ProjectTable'
 import Profile from './component/content/Profile'
+import Register from './component/content/Register'
+import Group from './component/content/Group'
 function App() {
   return (
     <div className="wrapper">
@@ -23,6 +25,12 @@ function App() {
       <div className="content-wrapper">
         <section className="content">
           <Switch>
+            <Route path="/group">
+              <Group />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
             <Route path="/profile">
               <Profile />
             </Route>
